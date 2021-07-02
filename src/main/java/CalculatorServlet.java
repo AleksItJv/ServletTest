@@ -16,7 +16,6 @@ public class CalculatorServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
 
-
         double value1 = Double.valueOf(request.getParameter("v1"));
         System.out.println(value1);
         double value2 = Double.valueOf(request.getParameter("v2"));
@@ -25,19 +24,23 @@ public class CalculatorServlet extends HttpServlet {
         System.out.println(action);
         String result = "";
 
-        switch (action){
+        switch (action) {
             case "add": {
-                result =value1+" + "+value2+" = " + (value1 + value2);
-                break;            }
+                result = value1 + " + " + value2 + " = " + (value1 + value2);
+                break;
+            }
             case "sub": {
-                result =value1+" - "+value2+" = " + (value1 - value2);
-                break;            }
+                result = value1 + " - " + value2 + " = " + (value1 - value2);
+                break;
+            }
             case "mult": {
-                result =value1+" * "+value2+" = " + (value1 * value2);
-                break;            }
+                result = value1 + " * " + value2 + " = " + (value1 * value2);
+                break;
+            }
             case "div": {
-                result =value1+" / "+value2+" = " + (value1 / value2);
-                break;            }
+                result = value1 + " / " + value2 + " = " + (value1 / value2);
+                break;
+            }
             default:
                 try {
                     throw new Exception();
@@ -49,7 +52,7 @@ public class CalculatorServlet extends HttpServlet {
 
         PrintWriter writer;
         try {
-            writer =response.getWriter();
+            writer = response.getWriter();
 
             writer.println("<html>");
             writer.println("<head>");

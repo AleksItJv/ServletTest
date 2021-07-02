@@ -7,10 +7,10 @@ import java.io.PrintWriter;
 public class HelloServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response){
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         PrintWriter writer;
         try {
-            writer =response.getWriter();
+            writer = response.getWriter();
 
             writer.println("<html>");
             writer.println("<head>");
@@ -42,8 +42,6 @@ public class HelloServlet extends HttpServlet {
             writer.println("</a");
             writer.println("</body");
             writer.println("</html>");
-
-/* or <a href="/index.jsp">home</a>*/
 
             writer.close();
 

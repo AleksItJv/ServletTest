@@ -7,10 +7,10 @@ import java.io.PrintWriter;
 public class TestServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response){
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         PrintWriter writer = null;
         try {
-            writer =response.getWriter();
+            writer = response.getWriter();
 
             writer.println("<html>");
             writer.println("<head>");
